@@ -8,7 +8,7 @@ export default function Layout({ children, pageId }) {
     <>
       <Head>
         {/* <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet' /> */}
-        <link rel="icon" href="/bono-small.png" sizes="any" />
+        <link rel="icon" href="/img/bono-small.png" sizes="any" />
         <title>{HeadStrings[pageId].title}</title>
         <meta property="og:title" content={HeadStrings[pageId].title} />
         <meta property="og:description" content={HeadStrings[pageId].description} />
