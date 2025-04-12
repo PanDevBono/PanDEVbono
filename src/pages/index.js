@@ -44,6 +44,7 @@ import anthropicLogo from '../../public/img/stack/ai-development-helpers/anthrop
 import openaiLogo from '../../public/img/stack/ai-development-helpers/openai.png'
 import copilotLogo from '../../public/img/stack/ai-development-helpers/copilot.png'
 
+
 export default function Home() {
   return (
     <Layout pageId="home">
