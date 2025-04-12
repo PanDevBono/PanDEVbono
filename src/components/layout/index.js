@@ -12,10 +12,10 @@ export default function Layout({ children, pageId }) {
         <title>{HeadStrings[pageId].title}</title>
         <meta property="og:title" content={HeadStrings[pageId].title} />
         <meta property="og:description" content={HeadStrings[pageId].description} />
-        <meta property="og:image" content="/logo-500.png" />
+        <meta property="og:image" content="/logo-horizontal.png" />
       </Head>
       <NavBar></NavBar>
-      <div className='bg-gray-200 py-10'>
+      <div>
         {children}
       </div>
       <Footer></Footer>

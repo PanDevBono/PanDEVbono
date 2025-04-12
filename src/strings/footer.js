@@ -1,6 +1,6 @@
 const footerStrings = {
   devInfo: {
-    description: 'Developed by PanDEVbono'
+    description: 'Developed by '
   }
 };
 
