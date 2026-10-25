@@ -20,7 +20,7 @@ PanDEVbono es un equipo de desarrolladores que diseña y desarrolla sitios web y
 
 ## Technology
 
-Hands-on experience with JavaScript, TypeScript, Python, Ruby, Java, PHP, React, Next.js, Angular, Node.js, Ruby on Rails, Firebase, MySQL, PostgreSQL, Redis and Elasticsearch, among others. PanDEVbono is not tied to a specific language or framework: it picks the right stack for each project and can work with any technology a client already uses.
+Hands-on experience with JavaScript, TypeScript, Python, Ruby, Java, PHP, React, Next.js, Angular, Node.js, Ruby on Rails, Firebase, MySQL, PostgreSQL, MongoDB, Redis and Elasticsearch, among others. PanDEVbono is not tied to a specific language or framework: it picks the right stack for each project and can work with any technology a client already uses.
 
 ## Contact
 

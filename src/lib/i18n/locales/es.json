@@ -156,8 +156,8 @@
       },
       "data": {
         "title": "Datos y almacenamiento",
-        "subtitle": "Bases de datos y búsqueda",
-        "description": "Motores relacionales, en memoria y de búsqueda para aplicaciones con muchos datos."
+        "subtitle": "SQL, NoSQL y búsqueda",
+        "description": "Motores relacionales, de documentos, en memoria y de búsqueda para aplicaciones con muchos datos."
       },
       "frontend": {
         "title": "Frontend",
@@ -205,6 +205,7 @@
       "php": "Lenguaje de servidor para desarrollo web",
       "mysql": "Base de datos relacional de código abierto muy popular",
       "postgresql": "Base de datos avanzada de código abierto",
+      "mongodb": "Base de datos de documentos para datos flexibles y escalables",
       "redis": "Almacén de datos en memoria para caché",
       "elasticsearch": "Motor distribuido de búsqueda y analítica",
       "react": "Librería popular para construir interfaces",
@@ -259,7 +260,7 @@
       },
       {
         "question": "¿Con qué tecnologías trabajan?",
-        "answer": "Tenemos experiencia con React, Next.js, Angular, Node.js, Ruby on Rails, Firebase, MySQL, PostgreSQL, Redis y Elasticsearch, entre otras. Hoy en día el lenguaje o framework importa menos que el resultado, así que elegimos el stack adecuado para cada proyecto y podemos trabajar con cualquier tecnología que ya uses."
+        "answer": "Tenemos experiencia con React, Next.js, Angular, Node.js, Ruby on Rails, Firebase, MySQL, PostgreSQL, MongoDB, Redis y Elasticsearch, entre otras. Hoy en día el lenguaje o framework importa menos que el resultado, así que elegimos el stack adecuado para cada proyecto y podemos trabajar con cualquier tecnología que ya uses."
       },
       {
         "question": "¿Trabajan en español e inglés?",

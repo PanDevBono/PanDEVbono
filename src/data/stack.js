@@ -19,6 +19,7 @@ import cloudflareLogo from '../../public/img/stack/cloud-edge/cloudflare.svg'
 // Infrastructure & Data Logos
 import mysqlLogo from '../../public/img/stack/infrastructure-data/mysql.png'
 import postgresqlLogo from '../../public/img/stack/infrastructure-data/postgresql.png'
+import mongodbLogo from '../../public/img/stack/infrastructure-data/mongodb.svg'
 import redisLogo from '../../public/img/stack/infrastructure-data/redis.png'
 import elasticSearchLogo from '../../public/img/stack/infrastructure-data/elastic-search.png'
 // Version Control and Editors Logos
@@ -103,6 +104,7 @@ export const stackCategories = [
     tools: [
       { id: 'mysql', name: 'MySQL', logo: mysqlLogo },
       { id: 'postgresql', name: 'PostgreSQL', logo: postgresqlLogo },
+      { id: 'mongodb', name: 'MongoDB', logo: mongodbLogo },
       { id: 'redis', name: 'Redis', logo: redisLogo },
       { id: 'elasticsearch', name: 'Elasticsearch', logo: elasticSearchLogo },
     ],

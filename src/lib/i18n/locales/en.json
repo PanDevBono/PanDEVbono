@@ -156,8 +156,8 @@
       },
       "data": {
         "title": "Data & Storage",
-        "subtitle": "Databases & Search",
-        "description": "Relational, in-memory and search engines powering data-intensive applications."
+        "subtitle": "SQL, NoSQL & Search",
+        "description": "Relational, document, in-memory and search engines powering data-intensive applications."
       },
       "frontend": {
         "title": "Frontend",
@@ -205,6 +205,7 @@
       "php": "Server-side scripting language for web development",
       "mysql": "Popular open-source relational database",
       "postgresql": "Advanced open-source database with rich features",
+      "mongodb": "Document database for flexible, scalable data",
       "redis": "In-memory data structure store for caching",
       "elasticsearch": "Distributed search and analytics engine",
       "react": "Popular library for building user interfaces",
@@ -259,7 +260,7 @@
       },
       {
         "question": "Which technologies do you work with?",
-        "answer": "We have experience with React, Next.js, Angular, Node.js, Ruby on Rails, Firebase, MySQL, PostgreSQL, Redis and Elasticsearch, among others. Today the specific language or framework matters less than the result, so we choose the right stack for each project and can work with any technology you already use."
+        "answer": "We have experience with React, Next.js, Angular, Node.js, Ruby on Rails, Firebase, MySQL, PostgreSQL, MongoDB, Redis and Elasticsearch, among others. Today the specific language or framework matters less than the result, so we choose the right stack for each project and can work with any technology you already use."
       },
       {
         "question": "Do you work in Spanish and English?",
