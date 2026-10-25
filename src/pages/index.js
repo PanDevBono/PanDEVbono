@@ -1,9 +1,10 @@
 import Layout from "../components/layout/index";
 import Image from 'next/image'
-import { ArrowRight, Bot, Cloud, Code, Gauge, Palette, Plug, Server, ShieldCheck, SquareKanban, UserPlus } from 'lucide-react';
+import { ArrowRight, Bot, ChevronDown, Cloud, Code, Gauge, Palette, Plug, Server, ShieldCheck, SquareKanban, UserPlus } from 'lucide-react';
 import mascot from '../../public/img/bono.png'
-import HomeStrings from '../strings/home';
 import { aiTools, stackCategories } from '../data/stack';
+import { t, useDictionary } from '../lib/i18n/translate';
+import { CONTACT_EMAIL } from '../lib/site';
 
 const serviceIcons = {
   code: Code,
@@ -16,41 +17,56 @@ const serviceIcons = {
 
 const aiFeatureIcons = [UserPlus, Plug, ShieldCheck, Gauge];
 
-const uniqueToolCount = new Set(stackCategories.flatMap((category) => category.tools.map((tool) => tool.name))).size;
+const uniqueToolCount = new Set(stackCategories.flatMap((category) => category.tools.map((tool) => tool.id))).size;
 
 const stats = [
-  { value: `${uniqueToolCount}+`, label: 'tools & technologies' },
-  { value: '3', label: 'cloud & edge platforms' },
-  { value: `${aiTools.length}`, label: 'AI tools managed' },
+  { value: `${uniqueToolCount}+`, key: 'stats.tools' },
+  { value: '3', key: 'stats.clouds' },
+  { value: `${aiTools.length}`, key: 'stats.ai' },
 ];
 
-function SectionHeading({ label, title, description }) {
+function faqSchema(dict) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: dict.faq.items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  };
+}
+
+function SectionHeading({ id, label, title, description }) {
   return (
     <div className="section-heading">
-      <span className="section-label">{`// ${label}`}</span>
-      <h2 className="section-title">{title}</h2>
+      <span className="section-label" aria-hidden="true">{`// ${label}`}</span>
+      <h2 id={id} className="section-title">{title}</h2>
       <p className="section-description">{description}</p>
     </div>
   );
 }
 
-function ToolChip({ tool }) {
+function ToolChip({ tool, dict }) {
   return (
     <div className="tool-chip" tabIndex={0}>
       <div className="tool-chip-logo">
-        <Image src={tool.logo} width={40} height={40} alt={`${tool.name} logo`} />
+        <Image src={tool.logo} width={40} height={40} alt={`${tool.name} ${t(dict, 'stack.logoAlt')}`} />
       </div>
       <span className="tool-chip-name">{tool.name}</span>
-      <div className="tool-tooltip" role="tooltip">{tool.description}</div>
+      <div className="tool-tooltip" role="tooltip">{t(dict, `stack.tools.${tool.id}`)}</div>
     </div>
   );
 }
 
 export default function Home() {
+  const { dict } = useDictionary();
+  const contactHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(t(dict, 'cta.emailSubject'))}`;
+
   return (
-    <Layout pageId="home">
+    <Layout schema={[faqSchema(dict)]}>
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero" aria-labelledby="hero-title">
         <div className="hero-grid-bg" aria-hidden="true"></div>
         <div className="hero-glow hero-glow-teal" aria-hidden="true"></div>
         <div className="hero-glow hero-glow-orange" aria-hidden="true"></div>
@@ -59,31 +75,32 @@ export default function Home() {
           <div className="hero-copy">
             <span className="hero-badge">
               <span className="status-dot"></span>
-              {HomeStrings.heroBadge}
+              {t(dict, 'hero.badge')}
             </span>
-            <h1 className="hero-title">
-              {HomeStrings.headerTitle}
-              <span className="text-gradient">{HomeStrings.headerSubtitle}</span>
+            <h1 id="hero-title" className="hero-title">
+              {t(dict, 'hero.title')}
+              <span className="text-gradient">{t(dict, 'hero.subtitle')}</span>
             </h1>
-            <p className="hero-description">{HomeStrings.headerDescription}</p>
+            <p className="hero-description">{t(dict, 'hero.description')}</p>
             <div className="hero-actions">
-              <a href={HomeStrings.contactEmail} className="btn-primary">
-                {HomeStrings.ctaPrimary}
+              <a href={contactHref} className="btn-primary">
+                {t(dict, 'hero.ctaPrimary')}
                 <ArrowRight className="btn-icon" />
               </a>
-              <a href="#stack" className="btn-ghost">{HomeStrings.ctaSecondary}</a>
+              <a href="#stack" className="btn-ghost">{t(dict, 'hero.ctaSecondary')}</a>
             </div>
           </div>
 
-          <div className="terminal">
+          {/* Decorative: a mock deploy that summarizes what we do (web + cloud + AI) */}
+          <div className="terminal" aria-hidden="true">
             <div className="terminal-header">
               <span className="terminal-dot bg-[#FF5F57]"></span>
               <span className="terminal-dot bg-[#FEBC2E]"></span>
               <span className="terminal-dot bg-[#28C840]"></span>
-              <span className="terminal-title">{HomeStrings.terminal.title}</span>
+              <span className="terminal-title">{t(dict, 'terminal.title')}</span>
             </div>
             <div className="terminal-body">
-              {HomeStrings.terminal.lines.map((line, index) => (
+              {dict.terminal.lines.map((line, index) => (
                 <p
                   key={index}
                   className={`terminal-line terminal-line-${line.type}`}
@@ -93,41 +110,42 @@ export default function Home() {
                   {line.text}
                 </p>
               ))}
-              <span className="terminal-cursor" aria-hidden="true"></span>
+              <span className="terminal-cursor"></span>
             </div>
-            <Image src={mascot} alt="Bono, the PanDEVbono mascot" className="terminal-mascot" width={96} height={96} />
+            <Image src={mascot} alt={t(dict, 'hero.mascotAlt')} className="terminal-mascot" width={96} height={96} priority />
           </div>
         </div>
 
         {/* Stats */}
         <div className="container">
-          <div className="stats">
+          <dl className="stats">
             {stats.map((stat) => (
-              <div key={stat.label} className="stat">
-                <span className="stat-value">{stat.value}</span>
-                <span className="stat-label">{stat.label}</span>
+              <div key={stat.key} className="stat">
+                <dt className="stat-label">{t(dict, stat.key)}</dt>
+                <dd className="stat-value">{stat.value}</dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="section">
+      <section id="services" className="section" aria-labelledby="services-title">
         <div className="container">
           <SectionHeading
-            label={HomeStrings.servicesLabel}
-            title={HomeStrings.servicesTitle}
-            description={HomeStrings.servicesDescription}
+            id="services-title"
+            label={t(dict, 'services.label')}
+            title={t(dict, 'services.title')}
+            description={t(dict, 'services.description')}
           />
           <div className="services-grid">
-            {HomeStrings.services.map((service, index) => {
+            {dict.services.items.map((service, index) => {
               const Icon = serviceIcons[service.icon];
               return (
-                <article key={service.title} className={`card service-card ${service.icon === 'bot' ? 'service-card-highlight' : ''}`}>
+                <article key={service.icon} className={`card service-card ${service.icon === 'bot' ? 'service-card-highlight' : ''}`}>
                   <div className="service-card-top">
-                    <div className="icon-box"><Icon /></div>
-                    <span className="card-index">{String(index + 1).padStart(2, '0')}</span>
+                    <div className="icon-box" aria-hidden="true"><Icon /></div>
+                    <span className="card-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
                   </div>
                   <h3 className="card-title">{service.title}</h3>
                   <p className="card-description">{service.description}</p>
@@ -139,20 +157,21 @@ export default function Home() {
       </section>
 
       {/* AI Tools Management Section */}
-      <section id="ai" className="section section-alt">
+      <section id="ai" className="section section-alt" aria-labelledby="ai-title">
         <div className="container ai-layout">
           <div>
             <SectionHeading
-              label={HomeStrings.aiLabel}
-              title={HomeStrings.aiTitle}
-              description={HomeStrings.aiDescription}
+              id="ai-title"
+              label={t(dict, 'ai.label')}
+              title={t(dict, 'ai.title')}
+              description={t(dict, 'ai.description')}
             />
             <ul className="ai-features">
-              {HomeStrings.aiFeatures.map((feature, index) => {
+              {dict.ai.features.map((feature, index) => {
                 const Icon = aiFeatureIcons[index];
                 return (
                   <li key={feature.title} className="ai-feature">
-                    <div className="icon-box icon-box-sm"><Icon /></div>
+                    <div className="icon-box icon-box-sm" aria-hidden="true"><Icon /></div>
                     <div>
                       <h3 className="ai-feature-title">{feature.title}</h3>
                       <p className="card-description">{feature.description}</p>
@@ -166,7 +185,7 @@ export default function Home() {
             <div className="ai-tools-orbit" aria-hidden="true"></div>
             <div className="ai-tools-grid">
               {aiTools.map((tool) => (
-                <ToolChip key={tool.name} tool={tool} />
+                <ToolChip key={tool.id} tool={tool} dict={dict} />
               ))}
             </div>
           </div>
@@ -174,25 +193,26 @@ export default function Home() {
       </section>
 
       {/* Tech Stack Section */}
-      <section id="stack" className="section">
+      <section id="stack" className="section" aria-labelledby="stack-title">
         <div className="container">
           <SectionHeading
-            label={HomeStrings.stackLabel}
-            title={HomeStrings.stackTitle}
-            description={HomeStrings.stackDescription}
+            id="stack-title"
+            label={t(dict, 'stack.label')}
+            title={t(dict, 'stack.title')}
+            description={t(dict, 'stack.description')}
           />
           <div className="stack-grid">
             {stackCategories.map((category, index) => (
               <article key={category.id} className={`card stack-card ${category.wide ? 'stack-card-wide' : ''}`}>
                 <div className="stack-card-header">
-                  <span className="card-index">{String(index + 1).padStart(2, '0')}</span>
-                  <h3 className="card-title">{category.title}</h3>
-                  <span className="stack-card-subtitle">{category.subtitle}</span>
+                  <span className="card-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                  <h3 className="card-title">{t(dict, `stack.categories.${category.id}.title`)}</h3>
+                  <span className="stack-card-subtitle">{t(dict, `stack.categories.${category.id}.subtitle`)}</span>
                 </div>
-                <p className="card-description">{category.description}</p>
+                <p className="card-description">{t(dict, `stack.categories.${category.id}.description`)}</p>
                 <div className="tool-list">
                   {category.tools.map((tool) => (
-                    <ToolChip key={tool.name} tool={tool} />
+                    <ToolChip key={tool.id} tool={tool} dict={dict} />
                   ))}
                 </div>
               </article>
@@ -201,15 +221,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="section section-alt" aria-labelledby="faq-title">
+        <div className="container faq-layout">
+          <SectionHeading
+            id="faq-title"
+            label={t(dict, 'faq.label')}
+            title={t(dict, 'faq.title')}
+            description={t(dict, 'faq.description')}
+          />
+          <div className="faq-list">
+            {dict.faq.items.map((item) => (
+              <details key={item.question} className="faq-item">
+                <summary className="faq-question">
+                  <h3>{item.question}</h3>
+                  <ChevronDown className="faq-icon" aria-hidden="true" />
+                </summary>
+                <p className="faq-answer">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Band */}
-      <section id="contact" className="section">
+      <section id="contact" className="section" aria-labelledby="contact-title">
         <div className="container">
           <div className="cta-band">
             <div className="hero-grid-bg" aria-hidden="true"></div>
-            <h2 className="section-title">{HomeStrings.ctaBandTitle}</h2>
-            <p className="section-description">{HomeStrings.ctaBandDescription}</p>
-            <a href={HomeStrings.contactEmail} className="btn-primary">
-              {HomeStrings.ctaPrimary}
+            <h2 id="contact-title" className="section-title">{t(dict, 'cta.title')}</h2>
+            <p className="section-description">{t(dict, 'cta.description')}</p>
+            <a href={contactHref} className="btn-primary">
+              {t(dict, 'hero.ctaPrimary')}
               <ArrowRight className="btn-icon" />
             </a>
           </div>

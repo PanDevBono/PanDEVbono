@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "PanDEVbono | Web Development, Cloud & AI Tools Management",
+    "description": "PanDEVbono designs and builds websites and web apps, deploys them on AWS, Google Cloud and Cloudflare, and sets up and manages AI tools like Claude, ChatGPT, Gemini and Copilot for your team.",
+    "ogImageAlt": "PanDEVbono — web development, cloud and AI tools management"
+  },
+  "nav": {
+    "services": "Services",
+    "ai": "AI",
+    "stack": "Stack",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "languageLabel": "Change language"
+  },
+  "hero": {
+    "badge": "Web · Cloud · AI",
+    "title": "Turning ideas into pages",
+    "subtitle": "communities into unforgettable stories.",
+    "description": "We are a group of developers who are passionate about creating beautiful, functional, and community oriented websites — deployed on modern cloud infrastructure and powered by AI.",
+    "ctaPrimary": "Start a project",
+    "ctaSecondary": "Explore our stack",
+    "mascotAlt": "Bono, the PanDEVbono mascot"
+  },
+  "terminal": {
+    "title": "pandevbono — deploy",
+    "lines": [
+      { "type": "command", "text": "pandev init --project your-idea" },
+      { "type": "output", "text": "✔ Scaffolding Next.js + TypeScript" },
+      { "type": "command", "text": "pandev cloud connect aws gcp cloudflare" },
+      { "type": "output", "text": "✔ Edge network, DNS & CDN configured" },
+      { "type": "command", "text": "pandev ai enable claude openai gemini" },
+      { "type": "output", "text": "✔ AI tools provisioned & managed" },
+      { "type": "command", "text": "pandev deploy --prod" },
+      { "type": "success", "text": "🚀 Live — your community has a home" }
+    ]
+  },
+  "stats": {
+    "tools": "tools & technologies",
+    "clouds": "cloud & edge platforms",
+    "ai": "AI tools managed"
+  },
+  "services": {
+    "label": "services",
+    "title": "What we build & manage",
+    "description": "From the first line of code to the infrastructure and AI tools that keep it running.",
+    "items": [
+      {
+        "icon": "code",
+        "title": "Web Development",
+        "description": "Fast, accessible, community-oriented websites and web apps built with React, Next.js and Angular."
+      },
+      {
+        "icon": "cloud",
+        "title": "Cloud & Edge",
+        "description": "Infrastructure on AWS and Google Cloud, with Cloudflare for DNS, CDN, Workers and protection at the edge."
+      },
+      {
+        "icon": "bot",
+        "title": "AI Tools Management",
+        "description": "We choose, set up, integrate and manage the AI tools your team uses — Claude, ChatGPT, Gemini, Copilot and more."
+      },
+      {
+        "icon": "server",
+        "title": "Backend & APIs",
+        "description": "Reliable APIs and services with Node.js, Rails and Firebase, backed by SQL, Redis and Elasticsearch."
+      },
+      {
+        "icon": "palette",
+        "title": "Design & UX",
+        "description": "Interfaces designed in Figma and Canva that look great and are easy to use."
+      },
+      {
+        "icon": "kanban",
+        "title": "Project & Docs",
+        "description": "Clear planning and documentation with Jira, Notion, Swagger and OpenAPI so nothing gets lost."
+      }
+    ]
+  },
+  "ai": {
+    "label": "ai",
+    "title": "We manage your AI tools",
+    "description": "AI moves fast. We keep your team on top of it — picking the right tools, wiring them into your workflow and products, and keeping them secure and cost-effective.",
+    "features": [
+      { "title": "Setup & onboarding", "description": "Accounts, workspaces, seats and access for your whole team." },
+      { "title": "Integrations", "description": "Connect AI models to your apps, data and internal tools via APIs, RAG and agents." },
+      { "title": "Governance & security", "description": "Usage policies, API key management and privacy-first configurations." },
+      { "title": "Cost & usage control", "description": "Monitor spend and usage so AI stays an investment, not a surprise." }
+    ]
+  },
+  "stack": {
+    "label": "stack",
+    "title": "Tech Stack & Tools",
+    "description": "The technologies and tools that power our solutions.",
+    "logoAlt": "logo",
+    "categories": {
+      "cloud": {
+        "title": "Cloud & Edge",
+        "subtitle": "AWS · GCP · Cloudflare",
+        "description": "Multi-cloud infrastructure, edge networking, DNS, CDN and security for fast, resilient applications."
+      },
+      "ai": {
+        "title": "AI Tools",
+        "subtitle": "Managed & Integrated",
+        "description": "We set up, integrate and manage the AI tools your team and your product rely on."
+      },
+      "languages": {
+        "title": "Programming Languages",
+        "subtitle": "Core Development",
+        "description": "Versatile languages for building robust applications across the stack."
+      },
+      "data": {
+        "title": "Data & Storage",
+        "subtitle": "Databases & Search",
+        "description": "Relational, in-memory and search engines powering data-intensive applications."
+      },
+      "frontend": {
+        "title": "Frontend",
+        "subtitle": "Web Experiences",
+        "description": "Engaging, fast user interfaces built with modern frameworks."
+      },
+      "backend": {
+        "title": "Backend",
+        "subtitle": "APIs & Services",
+        "description": "Powerful server-side applications with diverse languages and frameworks."
+      },
+      "devenv": {
+        "title": "Development Environment",
+        "subtitle": "Version Control & Editors",
+        "description": "Modern tooling for efficient collaboration and coding."
+      },
+      "pm": {
+        "title": "Project Management",
+        "subtitle": "Organization & Docs",
+        "description": "Tools for project tracking, documentation, and team collaboration."
+      },
+      "design": {
+        "title": "Design & UX",
+        "subtitle": "Creative Tools",
+        "description": "Professional design tools for beautiful and intuitive interfaces."
+      }
+    },
+    "tools": {
+      "aws": "Leading cloud platform for scalable infrastructure",
+      "gcp": "GCP compute, data and AI services",
+      "cloudflare": "Edge network, CDN, DNS, Workers and security",
+      "claude": "Anthropic models for coding, writing and agents",
+      "anthropic": "Claude models integrated into your products",
+      "openai": "ChatGPT and GPT models for teams and apps",
+      "gemini": "Google AI models across Workspace and GCP",
+      "copilot": "AI pair programmer for code suggestions",
+      "cursor": "AI-first code editor for faster delivery",
+      "huggingface": "Open-source models, datasets and inference",
+      "langchain": "Framework for LLM apps, RAG and agents",
+      "ollama": "Private, self-hosted local LLMs",
+      "javascript": "Dynamic programming language for web development",
+      "typescript": "Typed superset of JavaScript for scalable applications",
+      "python": "Versatile language for web, data science, and automation",
+      "java": "Object-oriented language for enterprise applications",
+      "php": "Server-side scripting language for web development",
+      "mysql": "Popular open-source relational database",
+      "postgresql": "Advanced open-source database with rich features",
+      "redis": "In-memory data structure store for caching",
+      "elasticsearch": "Distributed search and analytics engine",
+      "react": "Popular library for building user interfaces",
+      "angular": "Full-featured framework for web applications",
+      "nextjs": "React framework for production-grade applications",
+      "nodejs": "JavaScript runtime for server-side development",
+      "firebase": "Platform for building web and mobile applications",
+      "rails": "Framework for rapid web development",
+      "github": "Leading platform for code hosting and collaboration",
+      "gitlab": "DevOps platform for the full software lifecycle",
+      "bitbucket": "Git solution for professional teams",
+      "vscode": "Powerful and extensible code editor",
+      "notion": "All-in-one workspace for notes and collaboration",
+      "jira": "Project management tool for agile teams",
+      "airtable": "Flexible platform for organizing work",
+      "trello": "Visual tool for managing projects and tasks",
+      "docusaurus": "Tool for building documentation websites",
+      "swagger": "API documentation and design tools",
+      "openapi": "Standard for describing RESTful APIs",
+      "figma": "Collaborative interface design tool",
+      "canva": "Easy-to-use design platform for graphics"
+    }
+  },
+  "faq": {
+    "label": "faq",
+    "title": "Frequently asked questions",
+    "description": "Quick answers about how we work.",
+    "items": [
+      {
+        "question": "What does PanDEVbono do?",
+        "answer": "We design and develop websites and web apps, deploy them on AWS, Google Cloud and Cloudflare, and set up and manage the AI tools your team uses."
+      },
+      {
+        "question": "What does AI tools management include?",
+        "answer": "Choosing the right tools (Claude, ChatGPT, Gemini, GitHub Copilot, Cursor and others), setting up accounts and access, integrating AI models into your apps and data, defining usage and security policies, and keeping an eye on cost."
+      },
+      {
+        "question": "Which cloud platforms do you work with?",
+        "answer": "We work with Amazon Web Services (AWS) and Google Cloud Platform (GCP), and use Cloudflare for DNS, CDN, Workers and protection at the edge."
+      },
+      {
+        "question": "Which technologies do you use to build websites?",
+        "answer": "Mostly React, Next.js and Angular on the frontend, Node.js, Ruby on Rails and Firebase on the backend, and MySQL, PostgreSQL, Redis and Elasticsearch for data."
+      },
+      {
+        "question": "Do you work in Spanish and English?",
+        "answer": "Yes. We work with clients in both Spanish and English."
+      },
+      {
+        "question": "How do I start a project with you?",
+        "answer": "Email us at pan.dev.bono@gmail.com with a short description of your idea and we will get back to you."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to ship your idea?",
+    "description": "Tell us about your project and we will help you build it, host it and power it with AI.",
+    "emailSubject": "I need info about a page creation"
+  },
+  "footer": {
+    "developedBy": "Developed by ",
+    "github": "GitHub",
+    "email": "Email"
+  }
+}
