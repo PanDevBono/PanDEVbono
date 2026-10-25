@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from 'next/image'
-import { Github, Mail, Linkedin, Twitter } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import FooterStrings from '../../strings/footer';
 import logo from '../../../public/img/logo-name.png'
 
@@ -21,7 +22,7 @@ export default function Footer() {
             <h3 className="footer-title">Connect With Us</h3>
             <div className="footer-social-links">
               <a href="https://github.com/PanDEVbono" target="_blank" rel="noopener noreferrer" className="footer-social-link">
-                <Github className="footer-icon" />
+                <GitHubLogoIcon className="footer-icon" />
                 <span>GitHub</span>
               </a>
               <a href="mailto:pan.dev.bono@gmail.com?subject=I need info about a page creation" className="footer-social-link">
