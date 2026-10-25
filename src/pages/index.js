@@ -1,27 +1,31 @@
 import Layout from "../components/layout/index";
 import Image from 'next/image'
-import { ArrowRight, Bot, ChevronDown, Cloud, Code, Gauge, Palette, Plug, Server, ShieldCheck, SquareKanban, UserPlus } from 'lucide-react';
+import { ArrowRight, Bot, ChevronDown, Cloud, Code, Gauge, Palette, Plug, Server, ShieldCheck, Smartphone, UserPlus } from 'lucide-react';
 import mascot from '../../public/img/bono.png'
-import { aiTools, stackCategories } from '../data/stack';
+import { aiTools, platforms, stackCategories } from '../data/stack';
 import { t, useDictionary } from '../lib/i18n/translate';
 import { CONTACT_EMAIL } from '../lib/site';
 
 const serviceIcons = {
   code: Code,
+  smartphone: Smartphone,
   cloud: Cloud,
   bot: Bot,
   server: Server,
   palette: Palette,
-  kanban: SquareKanban,
 };
 
 const aiFeatureIcons = [UserPlus, Plug, ShieldCheck, Gauge];
 
-const uniqueToolCount = new Set(stackCategories.flatMap((category) => category.tools.map((tool) => tool.id))).size;
+const uniqueToolCount = new Set(
+  stackCategories
+    .filter((category) => category.id !== 'platforms')
+    .flatMap((category) => category.tools.map((tool) => tool.id))
+).size;
 
 const stats = [
   { value: `${uniqueToolCount}+`, key: 'stats.tools' },
-  { value: '3', key: 'stats.clouds' },
+  { value: `${platforms.length}`, key: 'stats.platforms' },
   { value: `${aiTools.length}`, key: 'stats.ai' },
 ];
 
@@ -91,27 +95,29 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Decorative: a mock deploy that summarizes what we do (web + cloud + AI) */}
-          <div className="terminal" aria-hidden="true">
-            <div className="terminal-header">
+          {/* Our process, idea to launch, styled as a project log */}
+          <div className="terminal">
+            <div className="terminal-header" aria-hidden="true">
               <span className="terminal-dot bg-[#FF5F57]"></span>
               <span className="terminal-dot bg-[#FEBC2E]"></span>
               <span className="terminal-dot bg-[#28C840]"></span>
               <span className="terminal-title">{t(dict, 'terminal.title')}</span>
             </div>
-            <div className="terminal-body">
+            <ol className="terminal-body">
               {dict.terminal.lines.map((line, index) => (
-                <p
-                  key={index}
+                <li
+                  key={line.step}
                   className={`terminal-line terminal-line-${line.type}`}
                   style={{ animationDelay: `${index * 0.35}s` }}
                 >
-                  {line.type === 'command' && <span className="terminal-prompt">$</span>}
-                  {line.text}
-                </p>
+                  <span className="terminal-step" aria-hidden="true">[{line.step}]</span>
+                  <span className="terminal-phase">{line.phase}</span>
+                  <span className="terminal-detail">{line.detail}</span>
+                  {line.type === 'step' && <span className="terminal-check" aria-hidden="true">✔</span>}
+                </li>
               ))}
-              <span className="terminal-cursor"></span>
-            </div>
+              <li className="terminal-cursor" aria-hidden="true"></li>
+            </ol>
             <Image src={mascot} alt={t(dict, 'hero.mascotAlt')} className="terminal-mascot" width={96} height={96} priority />
           </div>
         </div>
@@ -201,6 +207,10 @@ export default function Home() {
             title={t(dict, 'stack.title')}
             description={t(dict, 'stack.description')}
           />
+          <p className="stack-note">
+            <Code className="stack-note-icon" aria-hidden="true" />
+            {t(dict, 'stack.note')}
+          </p>
           <div className="stack-grid">
             {stackCategories.map((category, index) => (
               <article key={category.id} className={`card stack-card ${category.wide ? 'stack-card-wide' : ''}`}>

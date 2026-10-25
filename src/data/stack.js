@@ -4,6 +4,14 @@ import typescriptLogo from '../../public/img/stack/programming-languages/typescr
 import pythonLogo from '../../public/img/stack/programming-languages/python.png'
 import javaLogo from '../../public/img/stack/programming-languages/java.png'
 import phpLogo from '../../public/img/stack/programming-languages/php.svg'
+import rubyLogo from '../../public/img/stack/programming-languages/ruby.png'
+// Platforms Logos
+import webLogo from '../../public/img/stack/platforms/web.svg'
+import androidLogo from '../../public/img/stack/platforms/android.svg'
+import iosLogo from '../../public/img/stack/platforms/ios.svg'
+import windowsLogo from '../../public/img/stack/platforms/windows.svg'
+import macosLogo from '../../public/img/stack/platforms/macos.svg'
+import linuxLogo from '../../public/img/stack/platforms/linux.svg'
 // Cloud & Edge Logos
 import awsLogo from '../../public/img/stack/infrastructure-data/aws.png'
 import gcpLogo from '../../public/img/stack/cloud-edge/gcp.svg'
@@ -24,6 +32,7 @@ import notionLogo from '../../public/img/stack/project-management-documentation/
 import jiraLogo from '../../public/img/stack/project-management-documentation/jira.png'
 import airtableLogo from '../../public/img/stack/project-management-documentation/airtable.png'
 import trelloLogo from '../../public/img/stack/project-management-documentation/trello.png'
+import planeLogo from '../../public/img/stack/project-management-documentation/plane.png'
 import docusaurusLogo from '../../public/img/stack/project-management-documentation/docusaurus.png'
 import swaggerLogo from '../../public/img/stack/project-management-documentation/swagger.png'
 import openapiLogo from '../../public/img/stack/project-management-documentation/openapi.svg'
@@ -60,7 +69,22 @@ export const aiTools = [
   { id: 'ollama', name: 'Ollama', logo: ollamaLogo },
 ];
 
+export const platforms = [
+  { id: 'web', name: 'Web', logo: webLogo },
+  { id: 'android', name: 'Android', logo: androidLogo },
+  { id: 'ios', name: 'iOS', logo: iosLogo },
+  { id: 'windows', name: 'Windows', logo: windowsLogo },
+  { id: 'macos', name: 'macOS', logo: macosLogo },
+  { id: 'linux', name: 'Linux', logo: linuxLogo },
+];
+
+// Order and `wide` are chosen so every row of the 3-column grid fills up.
 export const stackCategories = [
+  {
+    id: 'platforms',
+    wide: true,
+    tools: platforms,
+  },
   {
     id: 'cloud',
     tools: [
@@ -75,22 +99,24 @@ export const stackCategories = [
     tools: aiTools,
   },
   {
-    id: 'languages',
-    tools: [
-      { id: 'javascript', name: 'JavaScript', logo: javascriptLogo },
-      { id: 'typescript', name: 'TypeScript', logo: typescriptLogo },
-      { id: 'python', name: 'Python', logo: pythonLogo },
-      { id: 'java', name: 'Java', logo: javaLogo },
-      { id: 'php', name: 'PHP', logo: phpLogo },
-    ],
-  },
-  {
     id: 'data',
     tools: [
       { id: 'mysql', name: 'MySQL', logo: mysqlLogo },
       { id: 'postgresql', name: 'PostgreSQL', logo: postgresqlLogo },
       { id: 'redis', name: 'Redis', logo: redisLogo },
       { id: 'elasticsearch', name: 'Elasticsearch', logo: elasticSearchLogo },
+    ],
+  },
+  {
+    id: 'languages',
+    wide: true,
+    tools: [
+      { id: 'javascript', name: 'JavaScript', logo: javascriptLogo },
+      { id: 'typescript', name: 'TypeScript', logo: typescriptLogo },
+      { id: 'python', name: 'Python', logo: pythonLogo },
+      { id: 'ruby', name: 'Ruby', logo: rubyLogo },
+      { id: 'java', name: 'Java', logo: javaLogo },
+      { id: 'php', name: 'PHP', logo: phpLogo },
     ],
   },
   {
@@ -126,6 +152,7 @@ export const stackCategories = [
     tools: [
       { id: 'notion', name: 'Notion', logo: notionLogo },
       { id: 'jira', name: 'Jira', logo: jiraLogo },
+      { id: 'plane', name: 'Plane', logo: planeLogo },
       { id: 'airtable', name: 'Airtable', logo: airtableLogo },
       { id: 'trello', name: 'Trello', logo: trelloLogo },
       { id: 'docusaurus', name: 'Docusaurus', logo: docusaurusLogo },

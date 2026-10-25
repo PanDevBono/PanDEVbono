@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "PanDEVbono | Desarrollo web, nube y gestión de herramientas de IA",
-    "description": "PanDEVbono diseña y desarrolla sitios y aplicaciones web, los despliega en AWS, Google Cloud y Cloudflare, y configura y gestiona herramientas de IA como Claude, ChatGPT, Gemini y Copilot para tu equipo.",
-    "ogImageAlt": "PanDEVbono — desarrollo web, nube y gestión de herramientas de IA"
+    "title": "PanDEVbono | Desarrollo web y de apps, nube y gestión de herramientas de IA",
+    "description": "PanDEVbono crea sitios web y apps para web, Android, iOS, Windows, macOS y Linux, los despliega en AWS, Google Cloud y Cloudflare, y configura y gestiona herramientas de IA como Claude, ChatGPT, Gemini y Copilot para tu equipo.",
+    "ogImageAlt": "PanDEVbono — sitios web y apps, nube y gestión de herramientas de IA"
   },
   "nav": {
     "services": "Servicios",
@@ -13,30 +13,58 @@
     "languageLabel": "Cambiar idioma"
   },
   "hero": {
-    "badge": "Web · Nube · IA",
-    "title": "Convertimos ideas en páginas",
+    "badge": "Web · Apps · Nube · IA",
+    "title": "Convertimos ideas en páginas y apps",
     "subtitle": "y comunidades en historias inolvidables.",
-    "description": "Somos un grupo de desarrolladores apasionados por crear sitios web bonitos, funcionales y orientados a la comunidad — desplegados en infraestructura moderna en la nube e impulsados por IA.",
+    "description": "Somos un grupo de desarrolladores apasionados por crear sitios web y apps bonitos, funcionales y orientados a la comunidad — para web, móvil y escritorio, desplegados en infraestructura moderna en la nube e impulsados por IA.",
     "ctaPrimary": "Empieza un proyecto",
     "ctaSecondary": "Conoce nuestro stack",
     "mascotAlt": "Bono, la mascota de PanDEVbono"
   },
   "terminal": {
-    "title": "pandevbono — deploy",
+    "title": "tu-proyecto/roadmap.log",
     "lines": [
-      { "type": "command", "text": "pandev init --project tu-idea" },
-      { "type": "output", "text": "✔ Creando proyecto Next.js + TypeScript" },
-      { "type": "command", "text": "pandev cloud connect aws gcp cloudflare" },
-      { "type": "output", "text": "✔ Red edge, DNS y CDN configurados" },
-      { "type": "command", "text": "pandev ai enable claude openai gemini" },
-      { "type": "output", "text": "✔ Herramientas de IA listas y gestionadas" },
-      { "type": "command", "text": "pandev deploy --prod" },
-      { "type": "success", "text": "🚀 En línea — tu comunidad ya tiene hogar" }
+      {
+        "type": "step",
+        "step": "01",
+        "phase": "Descubrimiento",
+        "detail": "escuchamos tu idea"
+      },
+      {
+        "type": "step",
+        "step": "02",
+        "phase": "Diseño",
+        "detail": "UX y UI en Figma"
+      },
+      {
+        "type": "step",
+        "step": "03",
+        "phase": "Desarrollo",
+        "detail": "app web, móvil o de escritorio"
+      },
+      {
+        "type": "step",
+        "step": "04",
+        "phase": "Nube",
+        "detail": "AWS · GCP · Cloudflare"
+      },
+      {
+        "type": "step",
+        "step": "05",
+        "phase": "IA",
+        "detail": "herramientas listas y gestionadas"
+      },
+      {
+        "type": "success",
+        "step": "🚀",
+        "phase": "Lanzamiento",
+        "detail": "tu comunidad ya tiene hogar"
+      }
     ]
   },
   "stats": {
     "tools": "herramientas y tecnologías",
-    "clouds": "plataformas de nube y edge",
+    "platforms": "plataformas: web, móvil y escritorio",
     "ai": "herramientas de IA gestionadas"
   },
   "services": {
@@ -47,7 +75,12 @@
       {
         "icon": "code",
         "title": "Desarrollo web",
-        "description": "Sitios y aplicaciones web rápidos, accesibles y orientados a la comunidad, hechos con React, Next.js y Angular."
+        "description": "Sitios y aplicaciones web rápidos, accesibles y orientados a la comunidad, con el stack adecuado para cada proyecto."
+      },
+      {
+        "icon": "smartphone",
+        "title": "Apps móviles y de escritorio",
+        "description": "Apps para Android, iOS, Windows, macOS y Linux — nativas o multiplataforma, lo que mejor se adapte a tu proyecto."
       },
       {
         "icon": "cloud",
@@ -62,17 +95,12 @@
       {
         "icon": "server",
         "title": "Backend y APIs",
-        "description": "APIs y servicios confiables con Node.js, Rails y Firebase, respaldados por SQL, Redis y Elasticsearch."
+        "description": "APIs, servicios y bases de datos confiables que impulsan tus sitios web y tus apps web, móviles y de escritorio."
       },
       {
         "icon": "palette",
-        "title": "Diseño y UX",
-        "description": "Interfaces diseñadas en Figma y Canva que se ven muy bien y son fáciles de usar."
-      },
-      {
-        "icon": "kanban",
-        "title": "Proyectos y documentación",
-        "description": "Planificación y documentación claras con Jira, Notion, Swagger y OpenAPI para que nada se pierda."
+        "title": "Diseño y producto",
+        "description": "Diseño UX/UI en Figma y Canva, y planificación y documentación claras con Plane, Jira y Notion."
       }
     ]
   },
@@ -81,18 +109,36 @@
     "title": "Gestionamos tus herramientas de IA",
     "description": "La IA avanza muy rápido. Mantenemos a tu equipo al día: elegimos las herramientas adecuadas, las conectamos con tu forma de trabajar y tus productos, y las mantenemos seguras y rentables.",
     "features": [
-      { "title": "Configuración y onboarding", "description": "Cuentas, espacios de trabajo, licencias y accesos para todo tu equipo." },
-      { "title": "Integraciones", "description": "Conectamos modelos de IA con tus aplicaciones, datos y herramientas internas mediante APIs, RAG y agentes." },
-      { "title": "Gobierno y seguridad", "description": "Políticas de uso, gestión de claves de API y configuraciones que protegen la privacidad." },
-      { "title": "Control de costos y uso", "description": "Monitoreamos el gasto y el uso para que la IA sea una inversión, no una sorpresa." }
+      {
+        "title": "Configuración y onboarding",
+        "description": "Cuentas, espacios de trabajo, licencias y accesos para todo tu equipo."
+      },
+      {
+        "title": "Integraciones",
+        "description": "Conectamos modelos de IA con tus aplicaciones, datos y herramientas internas mediante APIs, RAG y agentes."
+      },
+      {
+        "title": "Gobierno y seguridad",
+        "description": "Políticas de uso, gestión de claves de API y configuraciones que protegen la privacidad."
+      },
+      {
+        "title": "Control de costos y uso",
+        "description": "Monitoreamos el gasto y el uso para que la IA sea una inversión, no una sorpresa."
+      }
     ]
   },
   "stack": {
     "label": "stack",
     "title": "Stack tecnológico y herramientas",
-    "description": "Las tecnologías y herramientas que impulsan nuestras soluciones.",
+    "description": "Tecnologías con las que tenemos experiencia práctica. Las herramientas cambian rápido, así que elegimos el stack adecuado para cada proyecto — y podemos trabajar con cualquier lenguaje o framework que necesites.",
+    "note": "¿No ves tu stack? Trabajamos con cualquier lenguaje, framework o plataforma.",
     "logoAlt": "logo",
     "categories": {
+      "platforms": {
+        "title": "Plataformas",
+        "subtitle": "Web · Móvil · Escritorio",
+        "description": "Sitios web, apps para Android e iOS, y apps de escritorio para Windows, macOS y Linux — abiertos a cualquier tipo de app."
+      },
       "cloud": {
         "title": "Nube y edge",
         "subtitle": "AWS · GCP · Cloudflare",
@@ -106,7 +152,7 @@
       "languages": {
         "title": "Lenguajes de programación",
         "subtitle": "Desarrollo base",
-        "description": "Lenguajes versátiles para construir aplicaciones robustas en todo el stack."
+        "description": "Los lenguajes que más usamos — y nos adaptamos a lo que tu proyecto necesite."
       },
       "data": {
         "title": "Datos y almacenamiento",
@@ -116,7 +162,7 @@
       "frontend": {
         "title": "Frontend",
         "subtitle": "Experiencias web",
-        "description": "Interfaces rápidas y atractivas construidas con frameworks modernos."
+        "description": "Frameworks que conocemos bien; nos adaptamos sin problema a otros."
       },
       "backend": {
         "title": "Backend",
@@ -179,7 +225,15 @@
       "swagger": "Herramientas para diseñar y documentar APIs",
       "openapi": "Estándar para describir APIs REST",
       "figma": "Herramienta colaborativa de diseño de interfaces",
-      "canva": "Plataforma de diseño gráfico fácil de usar"
+      "canva": "Plataforma de diseño gráfico fácil de usar",
+      "ruby": "Lenguaje expresivo detrás de Ruby on Rails",
+      "plane": "Gestión de proyectos open source para equipos ágiles",
+      "web": "Sitios y apps web para cualquier navegador",
+      "android": "Apps para teléfonos y tablets Android",
+      "ios": "Apps para iPhone y iPad",
+      "windows": "Apps de escritorio para Windows",
+      "macos": "Apps de escritorio para Mac",
+      "linux": "Apps y herramientas de escritorio para Linux"
     }
   },
   "faq": {
@@ -189,7 +243,11 @@
     "items": [
       {
         "question": "¿Qué hace PanDEVbono?",
-        "answer": "Diseñamos y desarrollamos sitios y aplicaciones web, los desplegamos en AWS, Google Cloud y Cloudflare, y configuramos y gestionamos las herramientas de IA que usa tu equipo."
+        "answer": "Diseñamos y desarrollamos sitios web y apps — para la web, móvil (Android, iOS) y escritorio (Windows, macOS, Linux) —, los desplegamos en AWS, Google Cloud y Cloudflare, y configuramos y gestionamos las herramientas de IA que usa tu equipo."
+      },
+      {
+        "question": "¿Desarrollan apps móviles y de escritorio?",
+        "answer": "Sí. Creamos apps para Android e iOS, y apps de escritorio para Windows, macOS y Linux. Estamos abiertos a cualquier tipo de app: cuéntanos qué necesitas y elegimos el mejor enfoque, nativo o multiplataforma."
       },
       {
         "question": "¿Qué incluye la gestión de herramientas de IA?",
@@ -200,8 +258,8 @@
         "answer": "Trabajamos con Amazon Web Services (AWS) y Google Cloud Platform (GCP), y usamos Cloudflare para DNS, CDN, Workers y protección en el edge."
       },
       {
-        "question": "¿Qué tecnologías usan para crear sitios web?",
-        "answer": "Principalmente React, Next.js y Angular en el frontend; Node.js, Ruby on Rails y Firebase en el backend; y MySQL, PostgreSQL, Redis y Elasticsearch para los datos."
+        "question": "¿Con qué tecnologías trabajan?",
+        "answer": "Tenemos experiencia con React, Next.js, Angular, Node.js, Ruby on Rails, Firebase, MySQL, PostgreSQL, Redis y Elasticsearch, entre otras. Hoy en día el lenguaje o framework importa menos que el resultado, así que elegimos el stack adecuado para cada proyecto y podemos trabajar con cualquier tecnología que ya uses."
       },
       {
         "question": "¿Trabajan en español e inglés?",
@@ -215,7 +273,7 @@
   },
   "cta": {
     "title": "¿Listo para lanzar tu idea?",
-    "description": "Cuéntanos sobre tu proyecto y te ayudamos a construirlo, alojarlo e impulsarlo con IA.",
+    "description": "Cuéntanos sobre tu proyecto — un sitio web, una app móvil o de escritorio — y te ayudamos a construirlo, alojarlo e impulsarlo con IA.",
     "emailSubject": "Necesito información sobre la creación de una página"
   },
   "footer": {

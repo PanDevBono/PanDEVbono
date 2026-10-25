@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "PanDEVbono | Web Development, Cloud & AI Tools Management",
-    "description": "PanDEVbono designs and builds websites and web apps, deploys them on AWS, Google Cloud and Cloudflare, and sets up and manages AI tools like Claude, ChatGPT, Gemini and Copilot for your team.",
-    "ogImageAlt": "PanDEVbono — web development, cloud and AI tools management"
+    "title": "PanDEVbono | Web & App Development, Cloud & AI Tools Management",
+    "description": "PanDEVbono builds websites and apps for web, Android, iOS, Windows, macOS and Linux, deploys them on AWS, Google Cloud and Cloudflare, and sets up and manages AI tools like Claude, ChatGPT, Gemini and Copilot for your team.",
+    "ogImageAlt": "PanDEVbono — websites and apps, cloud and AI tools management"
   },
   "nav": {
     "services": "Services",
@@ -13,30 +13,58 @@
     "languageLabel": "Change language"
   },
   "hero": {
-    "badge": "Web · Cloud · AI",
-    "title": "Turning ideas into pages",
+    "badge": "Web · Apps · Cloud · AI",
+    "title": "Turning ideas into pages & apps",
     "subtitle": "communities into unforgettable stories.",
-    "description": "We are a group of developers who are passionate about creating beautiful, functional, and community oriented websites — deployed on modern cloud infrastructure and powered by AI.",
+    "description": "We are a group of developers who are passionate about creating beautiful, functional, and community oriented websites and apps — for web, mobile and desktop, deployed on modern cloud infrastructure and powered by AI.",
     "ctaPrimary": "Start a project",
     "ctaSecondary": "Explore our stack",
     "mascotAlt": "Bono, the PanDEVbono mascot"
   },
   "terminal": {
-    "title": "pandevbono — deploy",
+    "title": "your-project/roadmap.log",
     "lines": [
-      { "type": "command", "text": "pandev init --project your-idea" },
-      { "type": "output", "text": "✔ Scaffolding Next.js + TypeScript" },
-      { "type": "command", "text": "pandev cloud connect aws gcp cloudflare" },
-      { "type": "output", "text": "✔ Edge network, DNS & CDN configured" },
-      { "type": "command", "text": "pandev ai enable claude openai gemini" },
-      { "type": "output", "text": "✔ AI tools provisioned & managed" },
-      { "type": "command", "text": "pandev deploy --prod" },
-      { "type": "success", "text": "🚀 Live — your community has a home" }
+      {
+        "type": "step",
+        "step": "01",
+        "phase": "Discovery",
+        "detail": "we listen to your idea"
+      },
+      {
+        "type": "step",
+        "step": "02",
+        "phase": "Design",
+        "detail": "UX & UI in Figma"
+      },
+      {
+        "type": "step",
+        "step": "03",
+        "phase": "Build",
+        "detail": "web, mobile or desktop app"
+      },
+      {
+        "type": "step",
+        "step": "04",
+        "phase": "Cloud",
+        "detail": "AWS · GCP · Cloudflare"
+      },
+      {
+        "type": "step",
+        "step": "05",
+        "phase": "AI",
+        "detail": "tools set up & managed"
+      },
+      {
+        "type": "success",
+        "step": "🚀",
+        "phase": "Launch",
+        "detail": "your community has a home"
+      }
     ]
   },
   "stats": {
     "tools": "tools & technologies",
-    "clouds": "cloud & edge platforms",
+    "platforms": "platforms: web, mobile & desktop",
     "ai": "AI tools managed"
   },
   "services": {
@@ -47,7 +75,12 @@
       {
         "icon": "code",
         "title": "Web Development",
-        "description": "Fast, accessible, community-oriented websites and web apps built with React, Next.js and Angular."
+        "description": "Fast, accessible, community-oriented websites and web apps, built with the right stack for each project."
+      },
+      {
+        "icon": "smartphone",
+        "title": "Mobile & Desktop Apps",
+        "description": "Apps for Android, iOS, Windows, macOS and Linux — native or cross-platform, whatever fits your project best."
       },
       {
         "icon": "cloud",
@@ -62,17 +95,12 @@
       {
         "icon": "server",
         "title": "Backend & APIs",
-        "description": "Reliable APIs and services with Node.js, Rails and Firebase, backed by SQL, Redis and Elasticsearch."
+        "description": "Reliable APIs, services and databases that power your websites and your web, mobile and desktop apps."
       },
       {
         "icon": "palette",
-        "title": "Design & UX",
-        "description": "Interfaces designed in Figma and Canva that look great and are easy to use."
-      },
-      {
-        "icon": "kanban",
-        "title": "Project & Docs",
-        "description": "Clear planning and documentation with Jira, Notion, Swagger and OpenAPI so nothing gets lost."
+        "title": "Design & Product",
+        "description": "UX/UI design in Figma and Canva, plus clear planning and documentation with Plane, Jira and Notion."
       }
     ]
   },
@@ -81,18 +109,36 @@
     "title": "We manage your AI tools",
     "description": "AI moves fast. We keep your team on top of it — picking the right tools, wiring them into your workflow and products, and keeping them secure and cost-effective.",
     "features": [
-      { "title": "Setup & onboarding", "description": "Accounts, workspaces, seats and access for your whole team." },
-      { "title": "Integrations", "description": "Connect AI models to your apps, data and internal tools via APIs, RAG and agents." },
-      { "title": "Governance & security", "description": "Usage policies, API key management and privacy-first configurations." },
-      { "title": "Cost & usage control", "description": "Monitor spend and usage so AI stays an investment, not a surprise." }
+      {
+        "title": "Setup & onboarding",
+        "description": "Accounts, workspaces, seats and access for your whole team."
+      },
+      {
+        "title": "Integrations",
+        "description": "Connect AI models to your apps, data and internal tools via APIs, RAG and agents."
+      },
+      {
+        "title": "Governance & security",
+        "description": "Usage policies, API key management and privacy-first configurations."
+      },
+      {
+        "title": "Cost & usage control",
+        "description": "Monitor spend and usage so AI stays an investment, not a surprise."
+      }
     ]
   },
   "stack": {
     "label": "stack",
     "title": "Tech Stack & Tools",
-    "description": "The technologies and tools that power our solutions.",
+    "description": "Technologies we have hands-on experience with. Tools change fast, so we pick the right stack for each project — and we can work with any language or framework you need.",
+    "note": "Don't see your stack? We work with any language, framework or platform.",
     "logoAlt": "logo",
     "categories": {
+      "platforms": {
+        "title": "Platforms",
+        "subtitle": "Web · Mobile · Desktop",
+        "description": "Websites, Android and iOS apps, and desktop apps for Windows, macOS and Linux — we are open to any kind of app."
+      },
       "cloud": {
         "title": "Cloud & Edge",
         "subtitle": "AWS · GCP · Cloudflare",
@@ -106,7 +152,7 @@
       "languages": {
         "title": "Programming Languages",
         "subtitle": "Core Development",
-        "description": "Versatile languages for building robust applications across the stack."
+        "description": "The languages we use most — and we adapt to whatever your project needs."
       },
       "data": {
         "title": "Data & Storage",
@@ -116,7 +162,7 @@
       "frontend": {
         "title": "Frontend",
         "subtitle": "Web Experiences",
-        "description": "Engaging, fast user interfaces built with modern frameworks."
+        "description": "Frameworks we know well; we are comfortable picking up others."
       },
       "backend": {
         "title": "Backend",
@@ -179,7 +225,15 @@
       "swagger": "API documentation and design tools",
       "openapi": "Standard for describing RESTful APIs",
       "figma": "Collaborative interface design tool",
-      "canva": "Easy-to-use design platform for graphics"
+      "canva": "Easy-to-use design platform for graphics",
+      "ruby": "Expressive language behind Ruby on Rails",
+      "plane": "Open-source project tracking for agile teams",
+      "web": "Websites and web apps for any browser",
+      "android": "Apps for Android phones and tablets",
+      "ios": "Apps for iPhone and iPad",
+      "windows": "Desktop apps for Windows",
+      "macos": "Desktop apps for Mac",
+      "linux": "Desktop apps and tools for Linux"
     }
   },
   "faq": {
@@ -189,7 +243,11 @@
     "items": [
       {
         "question": "What does PanDEVbono do?",
-        "answer": "We design and develop websites and web apps, deploy them on AWS, Google Cloud and Cloudflare, and set up and manage the AI tools your team uses."
+        "answer": "We design and develop websites and apps — for the web, mobile (Android, iOS) and desktop (Windows, macOS, Linux) — deploy them on AWS, Google Cloud and Cloudflare, and set up and manage the AI tools your team uses."
+      },
+      {
+        "question": "Do you build mobile and desktop apps?",
+        "answer": "Yes. We build apps for Android and iOS, and desktop apps for Windows, macOS and Linux. We are open to any kind of app — tell us what you need and we will choose the best approach, native or cross-platform."
       },
       {
         "question": "What does AI tools management include?",
@@ -200,8 +258,8 @@
         "answer": "We work with Amazon Web Services (AWS) and Google Cloud Platform (GCP), and use Cloudflare for DNS, CDN, Workers and protection at the edge."
       },
       {
-        "question": "Which technologies do you use to build websites?",
-        "answer": "Mostly React, Next.js and Angular on the frontend, Node.js, Ruby on Rails and Firebase on the backend, and MySQL, PostgreSQL, Redis and Elasticsearch for data."
+        "question": "Which technologies do you work with?",
+        "answer": "We have experience with React, Next.js, Angular, Node.js, Ruby on Rails, Firebase, MySQL, PostgreSQL, Redis and Elasticsearch, among others. Today the specific language or framework matters less than the result, so we choose the right stack for each project and can work with any technology you already use."
       },
       {
         "question": "Do you work in Spanish and English?",
@@ -215,7 +273,7 @@
   },
   "cta": {
     "title": "Ready to ship your idea?",
-    "description": "Tell us about your project and we will help you build it, host it and power it with AI.",
+    "description": "Tell us about your project — a website, a mobile or a desktop app — and we will help you build it, host it and power it with AI.",
     "emailSubject": "I need info about a page creation"
   },
   "footer": {

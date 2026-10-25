@@ -21,7 +21,9 @@ function organizationSchema(locale, dict) {
         description: t(dict, 'meta.description'),
         knowsLanguage: locales,
         knowsAbout: [
-          'Web development', 'Next.js', 'React', 'Angular', 'Node.js',
+          'Web development', 'Mobile app development', 'Desktop app development',
+          'Android', 'iOS', 'Windows', 'macOS', 'Linux',
+          'Next.js', 'React', 'Angular', 'Node.js', 'Ruby on Rails',
           'Amazon Web Services', 'Google Cloud Platform', 'Cloudflare',
           'AI tools management', 'Claude', 'ChatGPT', 'Gemini', 'GitHub Copilot',
         ],

@@ -1,22 +1,26 @@
 # PanDEVbono
 
-> PanDEVbono is a team of developers that designs and builds websites and web apps, deploys them on AWS, Google Cloud (GCP) and Cloudflare, and sets up and manages AI tools (Claude, ChatGPT/OpenAI, Gemini, GitHub Copilot, Cursor and more) for teams. The site is available in Spanish (default) and English.
+> PanDEVbono is a team of developers that designs and builds websites and apps — for the web, mobile (Android, iOS) and desktop (Windows, macOS, Linux) — deploys them on AWS, Google Cloud (GCP) and Cloudflare, and sets up and manages AI tools (Claude, ChatGPT/OpenAI, Gemini, GitHub Copilot, Cursor and more) for teams. The site is available in Spanish (default) and English.
 
-PanDEVbono es un equipo de desarrolladores que diseña y desarrolla sitios y aplicaciones web, los despliega en AWS, Google Cloud (GCP) y Cloudflare, y configura y gestiona herramientas de IA para equipos.
+PanDEVbono es un equipo de desarrolladores que diseña y desarrolla sitios web y apps — para web, móvil (Android, iOS) y escritorio (Windows, macOS, Linux) —, los despliega en AWS, Google Cloud (GCP) y Cloudflare, y configura y gestiona herramientas de IA para equipos.
 
 ## Pages
 
-- [Inicio (español)](https://pandevbono.com/): Página principal en español — servicios, gestión de herramientas de IA, stack tecnológico y preguntas frecuentes.
-- [Home (English)](https://pandevbono.com/en): English home page — services, AI tools management, tech stack and FAQ.
+- [Inicio (español)](https://pandevbono.com/): Página principal en español — servicios, apps, gestión de herramientas de IA, stack tecnológico y preguntas frecuentes.
+- [Home (English)](https://pandevbono.com/en): English home page — services, apps, AI tools management, tech stack and FAQ.
 
 ## Services
 
-- Web development: websites and web apps with React, Next.js and Angular.
+- Web development: fast, accessible websites and web apps.
+- Mobile & desktop apps: apps for Android, iOS, Windows, macOS and Linux, native or cross-platform. Open to any kind of app.
 - Cloud & edge: infrastructure on AWS and Google Cloud; Cloudflare for DNS, CDN, Workers and protection.
 - AI tools management: choosing, setting up, integrating and managing AI tools — accounts and access, integrations with apps and data (APIs, RAG, agents), usage and security policies, cost and usage control.
-- Backend & APIs: Node.js, Ruby on Rails, Firebase; MySQL, PostgreSQL, Redis, Elasticsearch.
-- Design & UX: Figma and Canva.
-- Project management & documentation: Jira, Notion, Airtable, Trello, Docusaurus, Swagger, OpenAPI.
+- Backend & APIs: services and databases powering websites and apps.
+- Design & product: UX/UI design in Figma and Canva; planning and documentation with Plane, Jira and Notion.
+
+## Technology
+
+Hands-on experience with JavaScript, TypeScript, Python, Ruby, Java, PHP, React, Next.js, Angular, Node.js, Ruby on Rails, Firebase, MySQL, PostgreSQL, Redis and Elasticsearch, among others. PanDEVbono is not tied to a specific language or framework: it picks the right stack for each project and can work with any technology a client already uses.
 
 ## Contact
 
