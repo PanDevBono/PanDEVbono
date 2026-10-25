@@ -57,7 +57,7 @@ function ToolChip({ tool, dict }) {
       <div className="tool-chip-logo">
         <Image src={tool.logo} width={40} height={40} alt={`${tool.name} ${t(dict, 'stack.logoAlt')}`} />
       </div>
-      <span className="tool-chip-name">{tool.name}</span>
+      <span className="tool-chip-name">{tool.label ?? tool.name}</span>
       <div className="tool-tooltip" role="tooltip">{t(dict, `stack.tools.${tool.id}`)}</div>
     </div>
   );

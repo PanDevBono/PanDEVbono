@@ -106,7 +106,7 @@ export const stackCategories = [
       { id: 'postgresql', name: 'PostgreSQL', logo: postgresqlLogo },
       { id: 'mongodb', name: 'MongoDB', logo: mongodbLogo },
       { id: 'redis', name: 'Redis', logo: redisLogo },
-      { id: 'elasticsearch', name: 'Elasticsearch', logo: elasticSearchLogo },
+      { id: 'elasticsearch', name: 'Elasticsearch', label: 'Elastic­search', /* soft hyphen: breaks only when the chip is too narrow */ logo: elasticSearchLogo },
     ],
   },
   {

@@ -763,10 +763,12 @@
 }
 
 .tool-chip-name {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
+  max-width: 100%;
+  font-size: 0.75rem;
+  line-height: 1.3;
   color: var(--muted-foreground);
   text-align: center;
+  overflow-wrap: anywhere;
 }
 
 .tool-tooltip {
